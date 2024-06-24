@@ -1,0 +1,52 @@
+[
+    {
+        "question": "Quantos países têm acesso ao Mar Morto?",
+        "options": ["a) 1", "b) 2", "c) 3", "d) 4", "e) 5"],
+        "answer": "b"
+    },
+    {
+        "question": "Qual é o menor país do mundo em área territorial?",
+        "options": ["a) Vaticano", "b) Mônaco", "c) Nauru", "d) San Marino", "e) Liechtenstein"],
+        "answer": "a"
+    },
+    {
+        "question": "Qual é a montanha mais alta do mundo?",
+        "options": ["a) Monte Everest", "b) K2", "c) Kangchenjunga", "d) Lhotse", "e) Makalu"],
+        "answer": "a"
+    },
+    {
+        "question": "Qual é o elemento químico mais abundante na crosta terrestre?",
+        "options": ["a) Oxigênio", "b) Silício", "c) Alumínio", "d) Ferro", "e) Carbono"],
+        "answer": "b"
+    },
+    {
+        "question": "Qual é o maior lago do mundo em volume de água?",
+        "options": ["a) Mar Cáspio", "b) Lago Superior", "c) Lago Vitória", "d) Lago Baikal", "e) Lago Tanganica"],
+        "answer": "a"
+    },
+    {
+        "question": "Quem pintou 'Guernica'?",
+        "options": ["a) Pablo Picasso", "b) Salvador Dalí", "c) Claude Monet", "d) Vincent van Gogh", "e) Leonardo da Vinci"],
+        "answer": "a"
+    },
+    {
+        "question": "Quem foi o primeiro presidente dos Estados Unidos?",
+        "options": ["a) George Washington", "b) Thomas Jefferson", "c) Abraham Lincoln", "d) John Adams", "e) Benjamin Franklin"],
+        "answer": "a"
+    },
+    {
+        "question": "Quantos elementos químicos naturais existem?",
+        "options": ["a) 92", "b) 94", "c) 98", "d) 100", "e) 106"],
+        "answer": "a"
+    },
+    {
+        "question": "Qual é a velocidade da luz no vácuo?",
+        "options": ["a) 299.792.458 metros por segundo", "b) 300.000.000 metros por segundo", "c) 299.792.458 quilômetros por segundo", "d) 300.000.000 quilômetros por segundo", "e) 299.792,458 metros por segundo"],
+        "answer": "a"
+    },
+    {
+        "question": "Quem escreveu 'A Divina Comédia'?",
+        "options": ["a) Dante Alighieri", "b) William Shakespeare", "c) Geoffrey Chaucer", "d) John Milton", "e) Miguel de Cervantes"],
+        "answer": "a"
+    }
+]
