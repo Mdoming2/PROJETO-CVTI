@@ -6,6 +6,7 @@ try:
 except:
     perguntas = ""
 
+
 class ShowDoMilhao:
     global perguntas
     def __init__(self):
@@ -27,28 +28,32 @@ class ShowDoMilhao:
     def display_options(self):
         if not self.used_help:
             print("(1) Pedir Ajuda")
-        print("(2) Eliminar duas opções incorretas")
-        print("(3) Trocar de pergunta")
-        print("(4) Perguntar ao professor ou colega do curso")
-        print()
+            print("(2) Eliminar duas opções incorretas")
+            print("(3) Trocar de pergunta")
+            print("(4) Perguntar ao professor ou colega do curso\n")
 
-    def display_question(self):
-        # Seleciona uma pergunta que não tenha sido usada ainda
+    def display_question(self) -> list:
+        '''
+        Seleciona uma pergunta que não tenha sido usada ainda.
+        retorna uma lista com a questão e alternativas.
+        '''
         while True:
             question_index = random.randint(0, len(self.questions) - 1)
             if question_index not in self.used_questions:
                 self.current_question_index = question_index
                 self.used_questions.append(question_index)
                 break
-        
+
         question = self.questions[self.current_question_index]
+        return question
+        '''
         print("\n" + question["question"])
         for option in question["options"]:
-            print(option)
-    
-    def get_user_answer(self):
+            print(option)'''
+
+    def get_user_answer(self, user_answer):
         while True:
-            user_answer = input("Digite a letra correspondente à sua resposta: ").lower()
+            #user_answer = input("Digite a letra correspondente à sua resposta: ").lower()
             if user_answer in ['a', 'b', 'c', 'd', 'e', '1', '2', '3', '4']:
                 break
             else:
@@ -81,12 +86,14 @@ class ShowDoMilhao:
         elif user_answer == self.questions[self.current_question_index]["answer"]:
             self.score += self.prize_levels[self.correct_answers]
             self.correct_answers += 1
-            print("Resposta correta! Você ganhou R${}.".format(self.prize_levels[self.correct_answers - 1]))
+            return True
+            #print("Resposta correta! Você ganhou R${}.".format(self.prize_levels[self.correct_answers - 1]))
             if self.correct_answers < 10:
                 self.current_question_index = None  # Reseta para escolher uma nova pergunta
         else:
-            print(f"Resposta incorreta! Infelizmente você perdeu o jogo. Sua pontuação final é: R${self.prize_levels[self.correct_answers]}")
-            exit()
+            #print(f"Resposta incorreta! Infelizmente você perdeu o jogo. Sua pontuação final é: R${self.prize_levels[self.correct_answers]}")
+            #exit()
+            return False
 
     def get_help(self):
         print("Você pediu ajuda.")
@@ -126,11 +133,9 @@ class ShowDoMilhao:
             print(f"Resposta incorreta! Infelizmente você perdeu o jogo. Sua pontuação final é: R${self.prize_levels[self.correct_answers]}")
             exit()
 
+"""
 if __name__ == "__main__":
+    
     jogo = ShowDoMilhao()
     jogo.start_game()
-
-
-
-
-
+"""
