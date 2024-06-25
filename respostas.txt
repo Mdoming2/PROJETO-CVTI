@@ -1,7 +1,6 @@
-Nome: j, Opção escolhida: b, Pontuação: 0
-Nome: j, Opção escolhida: c, Pontuação: 0
-Nome: j, Opção escolhida: e, Pontuação: 0
-Nome: , Opção escolhida: b, Pontuação: 30
-Nome: j, Opção escolhida: c, Pontuação: 0
-Nome: j, Opção escolhida: d, Pontuação: 0
-Nome: j, Opção escolhida: c, Pontuação: 0
+Nome: J - Pontuação: 40
+Nome: K - Pontuação: 0
+Nome: L - Pontuação: 0
+Nome: O - Pontuação: 10
+Nome: L - Pontuação: 10
+Nome: O - Pontuação: 20

@@ -118,7 +118,7 @@ class ShowDoMilhao:
         self.current_question_index = None  # Reseta para escolher uma nova pergunta
 
     def ask_friend(self):
-        print("Você escolheu perguntar ao professor ou colega do curso.")
+        #print("Você escolheu perguntar ao professor ou colega do curso.")
         correct_answer = self.questions[self.current_question_index]["answer"]
         while True:
             friend_answer = input("Digite a letra correspondente à resposta que você acha correta: ").lower()
