@@ -2,6 +2,7 @@ import tkinter as tk
 from tkinter import *
 import tkinter.messagebox as messagebox
 import  random
+import pygame
 
 from app import ShowDoMilhao
 jogo = ShowDoMilhao()
@@ -10,6 +11,12 @@ janela = tk.Tk()
 janela.geometry('825x600')
 janela.resizable(False, False)
 janela.title('Projeto Cvti')
+
+pygame.mixer.init()
+som = pygame.mixer.music.load("abertura.mp3")
+pygame.mixer.music.play(-1)
+volume = 0.2
+pygame.mixer.music.set_volume(volume)
 
 photo = PhotoImage(file='show_do_miao.png')
 image_label = Label(janela, image=photo)
@@ -28,12 +35,11 @@ radio_1 = Radiobutton()
 radio_2 = Radiobutton()
 radio_3 = Radiobutton()
 radio_4 = Radiobutton()
-button_ajuda = Button()
-button_proxima = Button()
-button_eliminar = Button()
-button_ajuda_professor = Button()
-button_ajuda_universitarios = Button()
+button_proxima = None
+button_ajuda_professor = None
+button_ajuda_universitarios = None
 button_confirma = Button()
+usou_ajuda = False
         
 def exibir_entry():
     global entry, button_entry_confirmar, label_nome_entry, button_ajuda_professor, button_proxima, button_ajuda_universitarios, button_confirma
@@ -87,15 +93,21 @@ def salvar_resposta():
     if button_ajuda_universitarios:
         button_ajuda_universitarios.destroy()
 
-
     resposta_usuario = radio_value.get()
     nome = entry.get()
     
     if jogo.get_user_answer(resposta_usuario):
-        pontuacao += 10
+        pontuacao += 1000
         exibir_perguntas()
-        
+
+        som_acerto= pygame.mixer.Sound("certa_resposta.wav")
+        som_acerto.play()
+
+        messagebox.showinfo('Resultado', f'Parabens voce acertou! Sua pontuaçao foi: {pontuacao}')
+
     else:
+        som_erro = pygame.mixer.Sound("errou.wav")
+        som_erro.play()
         messagebox.showinfo('Resultado', f'Você perdeu! Sua pontuação foi: {pontuacao}')
         
         with open('respostas.txt', 'a', encoding='utf-8') as arquivo:
@@ -106,25 +118,17 @@ def salvar_resposta():
     radio_value.set(0)  
 
 def exibir_perguntas():
-    global label_pergunta, radio_value, button_confirma, entry,label_1, button_proxima, radio_1, radio_2, radio_3, radio_4, radio, label_pergunta, button_ajuda_professor, button_ajuda_universitarios
+    global label_pergunta,label_1 , radio_value, button_confirma, entry,label_1, button_proxima, radio_1, radio_2, radio_3, radio_4, radio, label_pergunta, button_ajuda_professor, button_ajuda_universitarios
     
     perguntas = [radio_1, radio_2, radio_3, radio_4, radio, label_pergunta]
 
     if button_confirma:
         button_confirma.destroy()
 
-    if button_ajuda_professor:
-        button_ajuda_professor.destroy()
-
-    if button_proxima:
-        button_proxima.destroy()
-
-    if button_ajuda_universitarios:
-        button_ajuda_universitarios.destroy()
 
     for i in perguntas:
         i.destroy()
-    
+
     image_label.destroy()
     label_nome_entry.destroy()
     
@@ -144,6 +148,9 @@ def exibir_perguntas():
     
     button_ajuda_universitarios = Button(janela, width=20, height=3, text='Ajuda dos universitários', relief='ridge', command=lambda: ajuda_universitarios(question))
     button_ajuda_universitarios.place(relx=0.7, rely=0.7)
+
+    if usou_ajuda:
+        desativar_botoes_ajuda()
     
     radio_value = StringVar()
     radio = Radiobutton(janela, text=question["options"][0], value='a', variable=radio_value)
@@ -165,21 +172,26 @@ def exibir_perguntas():
     button_confirma.place(relx=0.5, rely=0.8, anchor='center')
 
 def proxima_funcao(question): 
-    global button_proxima, button_ajuda_universitarios, button_ajuda_professor
+    global button_proxima, button_ajuda_universitarios, button_ajuda_professor, usou_ajuda
+
+    usou_ajuda = True
     
 
     if button_proxima:
-        button_proxima.config(state=tk.DISABLED)
+        button_proxima.destroy()
     
     if button_ajuda_universitarios:
-        button_ajuda_universitarios.config(state=tk.DISABLED)
+        button_ajuda_universitarios.destroy()
     
     if button_ajuda_professor:
-        button_ajuda_professor.config(state=tk.DISABLED)
+        button_ajuda_professor.destroy()
     
     exibir_perguntas()
 
 def exibir_ajuda(mensagem, question):
+
+    global usou_ajuda
+    usou_ajuda = True
   
     opcao_ajuda = random.choice(question["options"])
     resposta_ajuda = question["options"].index(opcao_ajuda) + 1
@@ -188,6 +200,9 @@ def exibir_ajuda(mensagem, question):
     desativar_botoes_ajuda()
 
 def ajuda_universitarios(question):
+
+    global usou_ajuda
+    usou_ajuda = True
     
     opcoes_eliminar = random.sample(question["options"], 2)
     

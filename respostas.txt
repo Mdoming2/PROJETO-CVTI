@@ -28,3 +28,11 @@ Nome: sd, Opção escolhida: c, Pontuação: 0
 Nome: as, Opção escolhida: b, Pontuação: 0
 Nome: , Opção escolhida: a, Pontuação: 5000
 Nome: , Opção escolhida: d, Pontuação: 3000
+Nome: , Opção escolhida: d, Pontuação: 10
+Nome: as, Opção escolhida: c, Pontuação: 0
+Nome: as, Opção escolhida: b, Pontuação: 0
+Nome: , Opção escolhida: c, Pontuação: 1000
+Nome: ds, Opção escolhida: b, Pontuação: 0
+Nome: as, Opção escolhida: c, Pontuação: 0
+Nome: as, Opção escolhida: c, Pontuação: 0
+Nome: , Opção escolhida: c, Pontuação: 6000
