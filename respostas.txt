@@ -1,6 +1,30 @@
-Nome: J - Pontuação: 40
-Nome: K - Pontuação: 0
-Nome: L - Pontuação: 0
-Nome: O - Pontuação: 10
-Nome: L - Pontuação: 10
-Nome: O - Pontuação: 20
+
+Nome: asd, Opção escolhida: d, Pontuação: 0
+Nome: as, Opção escolhida: d, Pontuação: 0
+Nome: asd, Opção escolhida: d, Pontuação: 0
+Nome: as, Opção escolhida: d, Pontuação: 0
+Nome: asd, Opção escolhida: d, Pontuação: 0
+Nome: asd, Opção escolhida: b, Pontuação: 0
+Nome: as, Opção escolhida: c, Pontuação: 0
+Nome: as, Opção escolhida: c, Pontuação: 0
+Nome: as, Opção escolhida: c, Pontuação: 0
+Nome: as, Opção escolhida: d, Pontuação: 0
+Nome: as, Opção escolhida: d, Pontuação: 0
+Nome: as, Opção escolhida: c, Pontuação: 0
+Nome: as, Opção escolhida: e, Pontuação: 0
+Nome: as, Opção escolhida: c, Pontuação: 0
+Nome: sad, Opção escolhida: c, Pontuação: 0
+Nome: , Opção escolhida: c, Pontuação: 1000
+Nome: as, Opção escolhida: d, Pontuação: 0
+Nome: , Opção escolhida: c, Pontuação: 5000
+Nome: , Opção escolhida: a, Pontuação: 1000
+Nome: as, Opção escolhida: d, Pontuação: 1000
+Nome: gf, Opção escolhida: c, Pontuação: 0
+Nome: gi, Opção escolhida: a, Pontuação: 0
+Nome: , Opção escolhida: d, Pontuação: 20
+Nome: ags, Opção escolhida: c, Pontuação: 0
+Nome: as, Opção escolhida: d, Pontuação: 0
+Nome: sd, Opção escolhida: c, Pontuação: 0
+Nome: as, Opção escolhida: b, Pontuação: 0
+Nome: , Opção escolhida: a, Pontuação: 5000
+Nome: , Opção escolhida: d, Pontuação: 3000
